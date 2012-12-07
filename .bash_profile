@@ -9,8 +9,19 @@ fi
 
 PATH=$PATH:$HOME/bin
 
+if [ "$PS1" != "" -a "${STARTED_SCREEN:-x}" = x -a "${SSH_TTY:-x}" != x ]
+then
+  STARTED_SCREEN=1 ; export STARTED_SCREEN
+  [ -d $HOME/lib/screen-logs ] || mkdir -p $HOME/lib/screen-logs
+  sleep 1
+  screen -RR -h 5000 && exit 0
+  # normally, execution of this rc script ends here...
+  echo "Screen failed! continuing with normal bash startup"
+fi
+# [end of auto-screen snippet]
+
 export PATH
-unset USERNAME
+export EDITOR=nano
 
 PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \$\[\033[00m\] '
 
