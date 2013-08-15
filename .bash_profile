@@ -12,7 +12,7 @@ PATH=$PATH:$HOME/bin
 if [ "$PS1" != "" -a "${STARTED_SCREEN:-x}" = x -a "${SSH_TTY:-x}" != x ]
 then
   STARTED_SCREEN=1 ; export STARTED_SCREEN
-  [ -d $HOME/lib/screen-logs ] || mkdir -p $HOME/lib/screen-logs
+  [ -d $HOME/log/screen-logs ] || mkdir -p $HOME/log/screen-logs
   sleep 1
   screen -RR -h 5000 && exit 0
   # normally, execution of this rc script ends here...

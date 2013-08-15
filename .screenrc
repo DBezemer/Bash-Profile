@@ -1,1 +1,8 @@
-shell -bash
+# no startup msg
+startup_message off
+# always use a login shell
+shell -$SHELL
+
+# auto-log
+logfile $HOME/log/screen-logs/%Y%m%d-%n.log
+deflog on
