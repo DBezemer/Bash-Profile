@@ -1,9 +1,3 @@
-## C/C++
-include "/usr/share/nano/c.nanorc"
-
-## Fortran
-include "/usr/share/nano/fortran.nanorc"
-
 ## HTML
 include "/usr/share/nano/html.nanorc"
 
@@ -19,20 +13,11 @@ include "/usr/share/nano/perl.nanorc"
 ## Python
 include "/usr/share/nano/python.nanorc"
 
-## reST
-include "/usr/share/nano/reST.nanorc"
-
 ## Ruby
 include "/usr/share/nano/ruby.nanorc"
 
 ## Bourne shell scripts
 include "/usr/share/nano/sh.nanorc"
-
-## makefile .am
-include "/usr/share/nano/gentoo.nanorc"
-
-## TeX
-include "/usr/share/nano/tex.nanorc"
 
 ## CSS
 include "/usr/share/nano/css.nanorc"
@@ -42,9 +27,6 @@ include "/usr/share/nano/php.nanorc"
 
 ## XML
 include "/usr/share/nano/xml.nanorc"
-
-## Lua
-include "/usr/share/nano/lua.nanorc"
 
 ## Apache confs
 include "/usr/share/nano/apacheconf.nanorc"
