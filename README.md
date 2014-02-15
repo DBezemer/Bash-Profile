@@ -5,6 +5,7 @@ Bash files for extra CLI stufff
 
 ## Usage instructions
 Place the files from nanorc in /usr/share/nanorc
+
 Place all other files either in /root (if you're using root) or in your home directory
 
 ## What these files do
