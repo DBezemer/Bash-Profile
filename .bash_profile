@@ -28,6 +28,7 @@ PS1='\[\033[01;32m\]\u@\h\[\033[01;34m\] \W \$\[\033[00m\] '
 RED='\e[1;31m'
 BLUE='\e[1;34m'
 CYAN='\e[1;36m'
+WHITE='\e[1;37m'
 
 export EDITOR=nano
 export VISUAL=nano
@@ -44,7 +45,7 @@ typeset -r PROMPT_COMMAND
 clear
 echo -ne ${RED}"Hello $USER, you are now logged in on $HOSTNAME ";echo "";
 echo -e ${CYAN}'This baby is powered by:' `cat /etc/redhat-release` ;
-echo -e "${BLUE}"; cal ;
+echo -e "${WHITE}"; cal ;
 echo -ne "${CYAN}Uptime for this server is ";uptime | awk /'up/ {print $3,$4}'
 
 while sleep 10;do echo -ne '\033]2;'$USER@$HOSTNAME' '$(uptime)'\007';done &
