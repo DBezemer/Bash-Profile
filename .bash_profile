@@ -33,11 +33,15 @@ WHITE='\e[1;37m'
 export EDITOR=nano
 export VISUAL=nano
 
-export HISTCONTROL=ignoredups
-export HISTFILESIZE=2000
-export HISTIGNORE=
-export HISTSIZE=1000
-export HISTTIMEFORMAT="%h/%d -- %H:%M:%S "
+export HISTFILESIZE=20000
+export HISTSIZE=10000
+HISTTIMEFORMAT="[%Y-%m-%d] [%T] "
+shopt -s histappend
+# Combine multiline commands into one in history
+shopt -s cmdhist
+# Ignore duplicates, ls without options and builtin commands
+HISTCONTROL=ignoredups
+export HISTIGNORE="&:ls:[bf]g:exit"
 
 PROMPT_COMMAND="history -a"
 typeset -r PROMPT_COMMAND
@@ -48,4 +52,4 @@ echo -e ${CYAN}'This baby is powered by:' `cat /etc/redhat-release` ;
 echo -e "${WHITE}"; cal ;
 echo -ne "${CYAN}Uptime for this server is ";uptime | awk /'up/ {print $3,$4}'
 
-while sleep 10;do echo -ne '\033]2;'$USER@$HOSTNAME' '$(uptime)'\007';done &
+echo -ne '\033]2;'$USER@$HOSTNAME' '$(uptime)'\007'

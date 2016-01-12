@@ -6,3 +6,6 @@ shell -$SHELL
 # auto-log
 logfile $HOME/log/screen-logs/%Y%m%d-%n.log
 deflog on
+
+# enable scrolling
+termcapinfo xterm* ti@:te@
